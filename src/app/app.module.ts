@@ -7,6 +7,7 @@ import {CountdownComponent} from "./countdown/countdown.component";
 
 const routes: Routes = [
   {path: ':countdown', component: CountdownComponent},
+  { path: '**', redirectTo: '/la', pathMatch: 'full' },
 ];
 
 @NgModule({
