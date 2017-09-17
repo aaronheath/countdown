@@ -1,0 +1,39 @@
+.countdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.countdown.australia {
+  background: url('/assets/adelaide.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.countdown.la {
+  background: url('/assets/angels-stadium.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.countdown .darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.countdown .text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 4vh;
+  font-family: 'Titillium Web', sans-serif;
+  text-shadow: 1px 1px 2px black;
+}
+

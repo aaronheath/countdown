@@ -2,13 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {RouterModule, Routes} from "@angular/router";
+import {CountdownComponent} from "./countdown/countdown.component";
+
+const routes: Routes = [
+  {path: ':countdown', component: CountdownComponent},
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountdownComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
