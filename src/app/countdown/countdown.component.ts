@@ -21,6 +21,7 @@ export class CountdownComponent implements OnInit {
   currentTime;
   countdown;
   daysLeft;
+  weeksLeft;
   wrapperClasses;
   when;
 
@@ -40,6 +41,7 @@ export class CountdownComponent implements OnInit {
       this.refreshCurrentTime();
 
       this.daysLeft = this.daysUntil(this.when);
+      this.weeksLeft = Math.floor(this.daysLeft / 7);
     }, 1000);
 
     this.route.params.subscribe((data) => {
@@ -47,6 +49,7 @@ export class CountdownComponent implements OnInit {
       this.countdown = this.countdowns[data.countdown];
       this.setWhen();
       this.daysLeft = this.daysUntil(this.when);
+      this.weeksLeft = Math.floor(this.daysLeft / 7);
     });
   }
 
