@@ -24,15 +24,21 @@ export class CountdownComponent implements OnInit {
   weeksLeft;
   wrapperClasses;
   when;
+  formattedWhen;
+  links;
 
   countdowns: Countdowns = {
-    australia: {when: [2018, 10, 11], msg: 'Australia'},
+    sydney: {when: [2017, 10, 18], msg: 'Sydney'},
+    pl: {when: [2017, 11, 1], msg: 'Port Lincoln'},
     la: {when: [2018, 6, 22], msg: 'Los Angeles'},
+    australia: {when: [2018, 10, 11], msg: 'Australia'},
   };
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.setLinks();
+
     this.refreshNow();
     this.refreshCurrentTime();
 
@@ -80,5 +86,12 @@ export class CountdownComponent implements OnInit {
     const sec = this.countdown.when[5] ? this.countdown.when[5] : 59;
 
     this.when = new Date(year, month, day, hour, min, sec);
+    this.formattedWhen = format(this.when, 'D MMM YYYY');
+  }
+
+  setLinks() {
+    this.links = Object.keys(this.countdowns).map((key) => {
+      return {key, text: this.countdowns[key].msg};
+    })
   }
 }

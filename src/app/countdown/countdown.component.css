@@ -4,6 +4,8 @@
   right: 0;
   bottom: 0;
   left: 0;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .countdown.australia {
@@ -13,6 +15,16 @@
 
 .countdown.la {
   background: url('/assets/angels-stadium.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.countdown.sydney {
+  background: url('/assets/ufc.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.countdown.pl {
+  background: url('/assets/pl.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -31,13 +43,36 @@
   transform: translate(0, -50%);
   text-align: center;
   width: 100%;
-  color: white;
   font-size: 4vh;
-  font-family: 'Titillium Web', sans-serif;
   text-shadow: 1px 1px 2px black;
   line-height: 4.5vh;
 }
 
 .countdown .text .weeks-left {
   font-size: 3vh;
+}
+
+.countdown .text .date {
+  font-size: 2vh;
+}
+
+.countdown .footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.countdown .footer ul {
+  padding: 0;
+}
+
+.countdown .footer ul li {
+  display: inline-block;
+  margin: 0 1vh;
+}
+
+a:link, a:visited {
+  color: #cdcdcd;
+  text-decoration: none;
 }

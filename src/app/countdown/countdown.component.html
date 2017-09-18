@@ -4,6 +4,15 @@
   <div class="text">
     <!--Current Time: {{ now }}<br>-->
     It's only <strong>{{ daysLeft }}</strong> days until <strong>{{ countdown.msg }}</strong>!<br>
-    <span class="weeks-left">Or if you like, it's <strong>{{ weeksLeft }}</strong> weeks!</span>
+    <span class="weeks-left">Or if you like, it's <strong>{{ weeksLeft }}</strong> weeks!</span><br>
+    <span class="date">{{ formattedWhen }}</span>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li *ngFor="let item of links">
+        <a [routerLink]="['/', item.key]">{{ item.text }}</a>
+      </li>
+    </ul>
   </div>
 </div>
