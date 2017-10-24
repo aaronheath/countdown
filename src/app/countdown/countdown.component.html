@@ -2,10 +2,28 @@
   <div class="darken"></div>
 
   <div class="text">
-    <!--Current Time: {{ now }}<br>-->
-    It's only <strong>{{ daysLeft }}</strong> days until <strong>{{ countdown.msg }}</strong>!<br>
-    <span class="weeks-left">Or if you like, it's <strong>{{ weeksLeft }}</strong> weeks!</span><br>
-    <span class="date">{{ formattedWhen }}</span>
+    <span *ngIf="daysLeft > 0">
+      It's only
+      <strong>{{ daysLeft }}</strong>
+      {{ dayPlural }} until
+      <strong>{{ countdown.msg }}</strong>!<br>
+    </span>
+
+    <span *ngIf="daysLeft === 0">
+      <strong>{{ countdown.msg }}</strong> is today!<br>
+    </span>
+
+    <span *ngIf="daysLeft < 0">
+      <strong>{{ countdown.msg }}</strong> was on {{ formattedWhen }}!<br>
+    </span>
+
+    <span class="weeks-left" *ngIf="daysLeft > 7">
+      Or if you like, it's
+      <strong>{{ weeksLeft }}</strong>
+      {{ weekPlural }} on {{ dayOfWeek }}!
+    </span><br>
+
+    <span class="date" *ngIf="daysLeft >= 0">{{ formattedWhen }}</span>
   </div>
 
   <div class="footer">

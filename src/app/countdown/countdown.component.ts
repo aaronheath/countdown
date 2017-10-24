@@ -25,11 +25,15 @@ export class CountdownComponent implements OnInit {
   wrapperClasses;
   when;
   formattedWhen;
+  dayOfWeek;
+  dayPlural;
+  weekPlural;
   links;
 
   countdowns: Countdowns = {
     sydney: {when: [2017, 10, 18], msg: 'Sydney'},
     pl: {when: [2017, 11, 1], msg: 'Port Lincoln'},
+    anzac: {when: [2018, 3, 25], msg: 'ANZAC Day'},
     la: {when: [2018, 6, 22], msg: 'Los Angeles'},
     australia: {when: [2018, 10, 11], msg: 'Australia'},
   };
@@ -55,7 +59,9 @@ export class CountdownComponent implements OnInit {
       this.countdown = this.countdowns[data.countdown];
       this.setWhen();
       this.daysLeft = this.daysUntil(this.when);
+      this.dayPlural = 1 === Math.abs(this.daysLeft) ? 'day' : 'days';
       this.weeksLeft = Math.floor(this.daysLeft / 7);
+      this.weekPlural = 1 === Math.abs(this.weeksLeft) ? 'week' : 'weeks';
     });
   }
 
@@ -87,6 +93,7 @@ export class CountdownComponent implements OnInit {
 
     this.when = new Date(year, month, day, hour, min, sec);
     this.formattedWhen = format(this.when, 'D MMM YYYY');
+    this.dayOfWeek = format(this.when, 'dddd');
   }
 
   setLinks() {

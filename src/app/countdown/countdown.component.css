@@ -28,6 +28,11 @@
   background-size: cover;
 }
 
+.countdown.anzac {
+  background: url('/assets/anzac.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 .countdown .darken {
   position: absolute;
   top: 0;
@@ -49,7 +54,7 @@
 }
 
 .countdown .text .weeks-left {
-  font-size: 3vh;
+  font-size: 2.6vh;
 }
 
 .countdown .text .date {
