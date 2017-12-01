@@ -6,43 +6,41 @@
   left: 0;
   color: white;
   font-family: 'Titillium Web', sans-serif;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .countdown.australia {
-  background: url('/assets/adelaide.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/adelaide.jpg');
 }
 
 .countdown.la {
-  background: url('/assets/angels-stadium.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/angels-stadium.jpg');
 }
 
 .countdown.perth {
-  background: url('/assets/ufc.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/ufc.jpg');
 }
 
 .countdown.wk {
-  background: url('/assets/wrestle-kingdom.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/wrestle-kingdom.jpg');
 }
 
 .countdown.wsw {
-  background: url('/assets/young-bucks.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/young-bucks.jpg');
 }
 
 /*.countdown.pl {*/
-  /*background: url('/assets/pl.jpg') no-repeat center center fixed;*/
-  /*background-size: cover;*/
+  /*background-image: url('/assets/pl.jpg');*/
 /*}*/
 
 .countdown.r1,
 .countdown.anzac,
 .countdown.r15 {
-  background: url('/assets/anzac.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/anzac.jpg');
 }
 
 .countdown .darken {
