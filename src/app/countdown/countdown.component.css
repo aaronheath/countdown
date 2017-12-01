@@ -93,3 +93,9 @@ a:link, a:visited {
   color: #cdcdcd;
   text-decoration: none;
 }
+
+.highlight,
+a.active:link,
+a.active:visited {
+  color: #e0c44c;
+}

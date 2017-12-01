@@ -4,9 +4,9 @@
   <div class="text">
     <span *ngIf="daysLeft > 0">
       It's only
-      <strong>{{ daysLeft }}</strong>
+      <strong class="highlight">{{ daysLeft }}</strong>
       {{ dayPlural }} until
-      <strong>{{ countdown.msg }}</strong>!<br>
+      <strong class="highlight">{{ countdown.msg }}</strong>!<br>
     </span>
 
     <span *ngIf="daysLeft === 0">
@@ -19,7 +19,7 @@
 
     <span class="weeks-left" *ngIf="daysLeft > 7">
       Or if you like, it's
-      <strong>{{ weeksLeft }}</strong>
+      <strong class="highlight">{{ weeksLeft }}</strong>
       {{ weekPlural }} on {{ dayOfWeek }}!
     </span><br>
 
@@ -29,7 +29,7 @@
   <div class="footer">
     <ul>
       <li *ngFor="let item of links">
-        <a [routerLink]="['/', item.key]">{{ item.text }}</a>
+        <a [routerLink]="['/', item.key]" routerLinkActive="active">{{ item.text }}</a>
       </li>
     </ul>
   </div>
