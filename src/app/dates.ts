@@ -10,7 +10,7 @@ export interface Countdowns {
 export const dates: Countdowns = {
   wk: {when: [2018, 0, 4], msg: 'Wrestle Kingdom'},
   perth: {when: [2018, 1, 10], msg: 'UFC Perth'},
-  wsw: {when: [2018, 2, 18], msg: 'WSW'},
+  wsw: {when: [2018, 2, 18], msg: 'World Series Wrestling'},
   r1: {when: [2018, 2, 23], msg: 'Round 1 v ADL'},
   anzac: {when: [2018, 3, 25], msg: 'ANZAC Day'},
   r15: {when: [2018, 6, 1], msg: 'Round 15 v NM'},
