@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { format } from 'date-fns';
+import {Component, OnInit} from '@angular/core';
+import {format} from 'date-fns';
 import {ActivatedRoute} from "@angular/router";
 
-export interface Countdown {
-  when: [number];
-  msg: string;
-}
-
-export interface Countdowns {
-  [path: string]: Countdown;
-}
+import {dates} from '../dates';
 
 @Component({
   selector: 'app-countdown',
@@ -30,14 +23,6 @@ export class CountdownComponent implements OnInit {
   weekPlural;
   links;
 
-  countdowns: Countdowns = {
-    sydney: {when: [2017, 10, 18], msg: 'Sydney'},
-    pl: {when: [2017, 11, 1], msg: 'Port Lincoln'},
-    anzac: {when: [2018, 3, 25], msg: 'ANZAC Day'},
-    la: {when: [2018, 6, 22], msg: 'Los Angeles'},
-    australia: {when: [2018, 10, 11], msg: 'Australia'},
-  };
-
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -56,7 +41,7 @@ export class CountdownComponent implements OnInit {
 
     this.route.params.subscribe((data) => {
       this.wrapperClasses = `countdown ${data.countdown}`;
-      this.countdown = this.countdowns[data.countdown];
+      this.countdown = dates[data.countdown];
       this.setWhen();
       this.daysLeft = this.daysUntil(this.when);
       this.dayPlural = 1 === Math.abs(this.daysLeft) ? 'day' : 'days';
@@ -85,11 +70,11 @@ export class CountdownComponent implements OnInit {
 
   setWhen() {
     const year = this.countdown.when[0] ? this.countdown.when[0] : undefined;
-    const month = this.countdown.when[1] ? this.countdown.when[1] : undefined;
+    const month = typeof this.countdown.when[1] !== 'undefined' ? this.countdown.when[1] : undefined;
     const day = this.countdown.when[2] ? this.countdown.when[2] : undefined;
-    const hour = this.countdown.when[3] ? this.countdown.when[3] : 23;
-    const min = this.countdown.when[4] ? this.countdown.when[4] : 59;
-    const sec = this.countdown.when[5] ? this.countdown.when[5] : 59;
+    const hour = this.countdown.when[3] ? this.countdown.when[3] : 0;
+    const min = this.countdown.when[4] ? this.countdown.when[4] : 0;
+    const sec = this.countdown.when[5] ? this.countdown.when[5] : 0;
 
     this.when = new Date(year, month, day, hour, min, sec);
     this.formattedWhen = format(this.when, 'D MMM YYYY');
@@ -97,8 +82,8 @@ export class CountdownComponent implements OnInit {
   }
 
   setLinks() {
-    this.links = Object.keys(this.countdowns).map((key) => {
-      return {key, text: this.countdowns[key].msg};
+    this.links = Object.keys(dates).map((key) => {
+      return {key, text: dates[key].msg};
     })
   }
 }

@@ -18,17 +18,29 @@
   background-size: cover;
 }
 
-.countdown.sydney {
+.countdown.perth {
   background: url('/assets/ufc.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-.countdown.pl {
-  background: url('/assets/pl.jpg') no-repeat center center fixed;
+.countdown.wk {
+  background: url('/assets/wrestle-kingdom.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-.countdown.anzac {
+.countdown.wsw {
+  background: url('/assets/young-bucks.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/*.countdown.pl {*/
+  /*background: url('/assets/pl.jpg') no-repeat center center fixed;*/
+  /*background-size: cover;*/
+/*}*/
+
+.countdown.r1,
+.countdown.anzac,
+.countdown.r15 {
   background: url('/assets/anzac.jpg') no-repeat center center fixed;
   background-size: cover;
 }
