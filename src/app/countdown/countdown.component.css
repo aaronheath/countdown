@@ -29,11 +29,21 @@
   background-image: url('/assets/wrestle-kingdom.jpg');
 }
 
-.countdown.wsw,
-.countdown.njpwadl,
-.countdown.njpwmel,
-.countdown.hoh {
+.countdown.laraconau {
+  background-image: url('/assets/laraconau.jpg');
+}
+
+.countdown.wsw {
   background-image: url('/assets/young-bucks.jpg');
+}
+
+.countdown.njpwadl,
+.countdown.njpwmel {
+  background-image: url('/assets/elite.jpg');
+}
+
+.countdown.hoh {
+  background-image: url('/assets/hoh.jpg');
 }
 
 /*.countdown.pl {*/
