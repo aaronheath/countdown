@@ -29,7 +29,10 @@
   background-image: url('/assets/wrestle-kingdom.jpg');
 }
 
-.countdown.wsw {
+.countdown.wsw,
+.countdown.njpwadl,
+.countdown.njpwmel,
+.countdown.hoh {
   background-image: url('/assets/young-bucks.jpg');
 }
 
