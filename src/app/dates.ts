@@ -8,7 +8,7 @@ export interface Countdowns {
 }
 
 export const dates: Countdowns = {
-  'njpw': {when: [2018, 5, 8], msg: 'Dominion & UFC 225'},
+  'njpw': {when: [2018, 5, 9], msg: 'Dominion, UFC 225 & Canadian GP'},
   'wsw-june': {when: [2018, 5, 24], msg: 'World Series Wrestling'},
   'r15': {when: [2018, 5, 30], msg: 'Round 15 v NM'},
   'hoh': {when: [2018, 6, 12], msg: 'House of Hardcore'},
