@@ -65,6 +65,10 @@
   background-image: url('/assets/f1.jpg');
 }
 
+.countdown.wwe {
+  background-image: url('/assets/mcg.jpg');
+}
+
 .countdown .darken {
   position: absolute;
   top: 0;
