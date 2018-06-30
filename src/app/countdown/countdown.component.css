@@ -69,6 +69,10 @@
   background-image: url('/assets/mcg.jpg');
 }
 
+.countdown.ukip {
+  background-image: url('/assets/ukip.jpg');
+}
+
 .countdown .darken {
   position: absolute;
   top: 0;
