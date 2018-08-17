@@ -41,6 +41,10 @@
   background-image: url('/assets/zsj.jpg');
 }
 
+.countdown.wsw-melbourne {
+  background-image: url('/assets/scurll.jpg');
+}
+
 .countdown.njpw,
 .countdown.njpwadl,
 .countdown.njpwmel {
@@ -49,6 +53,10 @@
 
 .countdown.hoh {
   background-image: url('/assets/hoh.jpg');
+}
+
+.countdown.mormon {
+  background-image: url('/assets/bookofmormon.jpg');
 }
 
 /*.countdown.pl {*/
