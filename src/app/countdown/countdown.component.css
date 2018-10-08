@@ -59,6 +59,10 @@
   background-image: url('/assets/bookofmormon.jpg');
 }
 
+.countdown.settlement {
+  background-image: url('/assets/germantown-rd-lot-empty.jpg');
+}
+
 /*.countdown.pl {*/
   /*background-image: url('/assets/pl.jpg');*/
 /*}*/
