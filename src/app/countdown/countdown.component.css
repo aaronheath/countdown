@@ -21,7 +21,8 @@
   background-image: url('/assets/angels-stadium.jpg');
 }
 
-.countdown.perth {
+.countdown.perth,
+.countdown.ufc-adelaide {
   background-image: url('/assets/ufc.jpg');
 }
 
