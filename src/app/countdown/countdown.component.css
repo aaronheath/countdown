@@ -22,7 +22,8 @@
 }
 
 .countdown.perth,
-.countdown.ufc-adelaide {
+.countdown.ufc-adelaide,
+.countdown.ufc-234 {
   background-image: url('/assets/ufc.jpg');
 }
 
@@ -69,6 +70,8 @@
 /*}*/
 
 .countdown.r1,
+.countdown.r2,
+.countdown.r4,
 .countdown.anzac,
 .countdown.r15 {
   background-image: url('/assets/anzac.jpg');
