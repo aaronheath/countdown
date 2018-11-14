@@ -8,7 +8,6 @@ export interface Countdowns {
 }
 
 export const dates: Countdowns = {
-  'australia': {when: [2018, 10, 11], msg: 'Australia'},
   'wsw-melbourne': {when: [2018, 10, 23], msg: 'WSW Melbourne'},
   'ufc-adelaide': {when: [2018, 11, 2], msg: 'UFC ADL'},
   'ufc-234': {when: [2019, 1, 10], msg: 'UFC 234'},
