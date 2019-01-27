@@ -43,7 +43,8 @@
   background-image: url('/assets/zsj.jpg');
 }
 
-.countdown.wsw-melbourne {
+.countdown.wsw-melbourne,
+.countdown.wsw-adl-19 {
   background-image: url('/assets/scurll.jpg');
 }
 
@@ -71,9 +72,29 @@
 
 .countdown.r1,
 .countdown.r2,
+.countdown.r3,
 .countdown.r4,
+.countdown.r5,
+.countdown.r6,
+.countdown.r7,
+.countdown.r8,
+.countdown.r9,
+.countdown.r10,
+.countdown.r11,
+.countdown.r12,
+.countdown.r13,
+.countdown.r14,
+.countdown.r15,
+.countdown.r16,
+.countdown.r17,
+.countdown.r18,
+.countdown.r19,
+.countdown.r20,
+.countdown.r21,
+.countdown.r22,
+.countdown.r23,
 .countdown.anzac,
-.countdown.r15 {
+.countdown.anzac-al {
   background-image: url('/assets/anzac.jpg');
 }
 
